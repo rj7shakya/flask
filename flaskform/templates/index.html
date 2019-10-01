@@ -1,0 +1,34 @@
+<<!-- p>
+	{% if breed %}
+	the breed you entered is {{breed}}
+	update it in the form
+	{% else %}
+	please enter your breed:
+	{% endif %}
+</p>
+
+<form action="" method="POST">
+	{{ form.hidden_tag() }}
+	{{ form.breed.label }} {{form.breed()}}
+	{{ form.submit() }}
+
+
+</form> -->
+
+ <h1>welcome to the puppy survey!</h1>
+ <form action="" method="POST">
+ 	{{form.hidden_tag()}}
+ 	{{form.breed.label}}{{form.breed}}
+ 	<br>
+ 	{{form.neutered.label}}{{form.neutered}}
+ 	<br>
+ 	{{form.food_choice.label}}{{form.food_choice}}
+ 	<br>
+ 	{{form.mood.label}}{{form.mood}}
+ 	<br>
+ 	Any other feedback?
+ 	<br>
+ 	{{form.feedback}}
+ 	<br>
+ 	{{form.submit()}}
+ </form>
